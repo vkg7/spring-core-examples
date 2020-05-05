@@ -11,10 +11,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:annotation-config />
-
-    <bean id="employee" class="com.vijay.learn.springcore.annotations.Employee" autowire="byType"/>
-    <bean id="department" class="com.vijay.learn.springcore.annotations.Department"/>
-    <bean id="department2" class="com.vijay.learn.springcore.annotations.Department" autowire-candidate="false"/>
+    <context:component-scan base-package="com.vijay.learn.springcore"/>
 
 </beans>

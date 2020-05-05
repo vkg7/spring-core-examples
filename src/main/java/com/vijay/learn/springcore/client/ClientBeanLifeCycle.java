@@ -6,19 +6,16 @@
 
 package com.vijay.learn.springcore.client;
 
-import com.vijay.learn.springcore.beandi.CollectionsDI;
-import com.vijay.learn.springcore.beandi.Student;
-import com.vijay.learn.springcore.beandi.User;
 import com.vijay.learn.springcore.beanlifecycle.BeanLifeCycleAnnotations;
 import com.vijay.learn.springcore.beanlifecycle.BeanLifeCycleInterface;
 import com.vijay.learn.springcore.beanlifecycle.BeanLifeCycleXML;
-import com.vijay.learn.springcore.beanscope.BeanScope;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ClientBeanLifeCycle {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/applicationConfig-beanlifecycle.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-application-context-lifecycle.xml");
 
         BeanLifeCycleXML beanLifeCycle = context.getBean("beanLifeCycleXML", BeanLifeCycleXML.class);
         beanLifeCycle.sayHello();

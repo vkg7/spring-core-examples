@@ -12,12 +12,13 @@ import com.vijay.learn.springcore.beandi.CollectionsDI;
 import com.vijay.learn.springcore.beandi.Student;
 import com.vijay.learn.springcore.beandi.User;
 import com.vijay.learn.springcore.beanscope.BeanScope;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ClientDI {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/applicationConfig-di.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-application-context-di.xml");
         //Dependency Injection example where User HAS-A relationship with Car
         User user = context.getBean("user", User.class);
         System.out.printf("User '%s' has car named '%s' with per day cost at Rs. %d. %n",user.getUserName(),user.getCar().getName(),user.getCar().getPerDayCost());

@@ -18,7 +18,7 @@ public class Employee {
     private String empName;
 
     @Autowired//@Autowired on properties
-    //@Qualifier("department")
+    @Qualifier("department")
     private Department department;
 
 //    @Autowired//@Autowired on constructors

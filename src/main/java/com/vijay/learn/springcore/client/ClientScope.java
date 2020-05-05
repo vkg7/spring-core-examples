@@ -6,18 +6,13 @@
 
 package com.vijay.learn.springcore.client;
 
-import com.vijay.learn.springcore.beandi.CollectionsDI;
-import com.vijay.learn.springcore.beandi.Student;
-import com.vijay.learn.springcore.beandi.User;
-import com.vijay.learn.springcore.beanlifecycle.BeanLifeCycleInterface;
-import com.vijay.learn.springcore.beanlifecycle.BeanLifeCycleXML;
 import com.vijay.learn.springcore.beanscope.BeanScope;
-import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ClientScope {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/applicationConfig-di.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-application-context-scope.xml");
 
         BeanScope beanScope = context.getBean("beanScope", BeanScope.class);
         beanScope.setMessage("We are testign Bean's Scope...");

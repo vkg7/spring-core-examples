@@ -63,5 +63,4 @@
             </list>
         </property>
     </bean>
-    <bean id="beanScope" class="com.vijay.learn.springcore.beanscope.BeanScope" scope="prototype"/>
 </beans>
