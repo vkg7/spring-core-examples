@@ -11,6 +11,16 @@ public class Student {
     private String name;
     private Hostel hostel;
 
+    public Student() {
+    }
+
+    //Added below constructor for autowiring by constructor example
+    public Student(String id, String name, Hostel hostel) {
+        this.id = id;
+        this.name = name;
+        this.hostel = hostel;
+    }
+
     public String getId() {
         return id;
     }

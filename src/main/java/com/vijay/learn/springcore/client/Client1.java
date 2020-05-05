@@ -15,9 +15,9 @@ import com.vijay.learn.springcore.beanscope.BeanScope;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Client {
+public class Client1 {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/applicationConfig-core1.xml");
         //Dependency Injection example where User HAS-A relationship with Car
         User user = context.getBean("user", User.class);
         System.out.printf("User '%s' has car named '%s' with per day cost at Rs. %d. %n",user.getUserName(),user.getCar().getName(),user.getCar().getPerDayCost());
