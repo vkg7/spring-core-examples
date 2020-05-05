@@ -9,9 +9,9 @@ package com.vijay.learn.springcore.client;
 import com.vijay.learn.springcore.beandi.Student;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Client2 {
+public class ClientAutoWiring {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/applicationConfig-core2.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/applicationConfig-autowiring.xml");
 
         //Autowiring byName
         Student studentAutoWiringByName = context.getBean("studentAutoWiringByName", Student.class);

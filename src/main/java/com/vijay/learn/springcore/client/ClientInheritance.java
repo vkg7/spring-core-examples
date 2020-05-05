@@ -6,13 +6,12 @@
 
 package com.vijay.learn.springcore.client;
 
-import com.vijay.learn.springcore.beandi.Student;
 import com.vijay.learn.springcore.beaninheritance.Father;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Client3 {
+public class ClientInheritance {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/applicationConfig-core3.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/applicationConfig-inheritance.xml");
 
         Father father = context.getBean("father", Father.class);
         System.out.printf("Bean Inheitance - Father's name is %s %s : %n",father.getFirstName(),father.getLastName());

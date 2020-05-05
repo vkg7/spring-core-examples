@@ -63,9 +63,5 @@
             </list>
         </property>
     </bean>
-
-    <bean id="beanLifeCycleXML" class="com.vijay.learn.springcore.beanlifecycle.BeanLifeCycleXML" init-method="init" destroy-method="destroy" />
-    <bean id="beanLifeCycleInterface" class="com.vijay.learn.springcore.beanlifecycle.BeanLifeCycleInterface" />
-
     <bean id="beanScope" class="com.vijay.learn.springcore.beanscope.BeanScope" scope="prototype"/>
 </beans>
