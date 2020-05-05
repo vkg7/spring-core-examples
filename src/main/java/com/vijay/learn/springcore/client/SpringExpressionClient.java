@@ -18,6 +18,7 @@ public class SpringExpressionClient {
         System.out.println("Constant :"+spel.getConstant());
         System.out.println("PI value: " +spel.getPI());
         System.out.println("Current Date: " +spel.getCurrentDate());
+        System.out.println("Current City: " +spel.getCurrentCity());
 
     }
 

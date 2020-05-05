@@ -6,14 +6,10 @@
 
 package com.vijay.learn.springcore.client;
 
-import com.vijay.learn.springcore.beanlifecycle.BeanLifeCycleInterface;
-import com.vijay.learn.springcore.beanlifecycle.BeanLifeCycleXML;
 import com.vijay.learn.springcore.beandi.CollectionsDI;
 import com.vijay.learn.springcore.beandi.Student;
 import com.vijay.learn.springcore.beandi.User;
-import com.vijay.learn.springcore.beanscope.BeanScope;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringDIClient {
@@ -37,20 +33,5 @@ public class SpringDIClient {
 
         CollectionsDI collectionsDI = context.getBean("collectionsDI", CollectionsDI.class);
         System.out.printf("collectionsDI : %s %n",collectionsDI.toString());
-
-        BeanLifeCycleXML beanLifeCycle = context.getBean("beanLifeCycleXML", BeanLifeCycleXML.class);
-        beanLifeCycle.sayHello();
-
-        BeanLifeCycleInterface beanLifeCycleInterface = context.getBean("beanLifeCycleInterface", BeanLifeCycleInterface.class);
-        beanLifeCycleInterface.sayHello();
-
-        BeanScope beanScope = context.getBean("beanScope", BeanScope.class);
-        beanScope.setMessage("We are testign Bean's Scope...");
-        System.out.printf("Bean's Scope - message is %s : %n",beanScope.getMessage());
-
-        BeanScope beanScope1 = context.getBean("beanScope", BeanScope.class);
-        System.out.printf("Bean's Scope -  message is %s : %n",beanScope1.getMessage());
-
-        ((AbstractApplicationContext)context).registerShutdownHook();
     }
 }

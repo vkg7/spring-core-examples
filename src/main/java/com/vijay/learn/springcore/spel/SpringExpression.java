@@ -23,6 +23,9 @@ public class SpringExpression {
     @Value("#{T(java.lang.Math).PI * 45}")
     private double PI;
 
+    @Value("#{hostel.city}")
+    private String currentCity;
+
     public double getConstant() {
         return constant;
     }
@@ -45,6 +48,14 @@ public class SpringExpression {
 
     public void setCurrentDate(LocalDate currentDate) {
         this.currentDate = currentDate;
+    }
+
+    public String getCurrentCity() {
+        return currentCity;
+    }
+
+    public void setCurrentCity(String currentCity) {
+        this.currentCity = currentCity;
     }
 }
 

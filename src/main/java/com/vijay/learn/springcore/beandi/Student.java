@@ -6,10 +6,17 @@
 
 package com.vijay.learn.springcore.beandi;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class Student {
     private String id;
     private String name;
+
+    @Value("#{hostel}")
     private Hostel hostel;
+
+    @Value("#{hostel.city}")
+    private String currentCity;
 
     public Student() {
     }
@@ -43,6 +50,14 @@ public class Student {
 
     public void setHostel(Hostel hostel) {
         this.hostel = hostel;
+    }
+
+    public String getCurrentCity() {
+        return currentCity;
+    }
+
+    public void setCurrentCity(String currentCity) {
+        this.currentCity = currentCity;
     }
 
     @Override
