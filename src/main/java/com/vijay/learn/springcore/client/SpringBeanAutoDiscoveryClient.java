@@ -11,7 +11,7 @@ import com.vijay.learn.springcore.beanlifecycle.BeanLifeCycleXML;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class ClientBeanAutoDiscovery {
+public class SpringBeanAutoDiscoveryClient {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/spring-application-context-autodiscovery.xml");
 

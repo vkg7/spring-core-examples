@@ -10,7 +10,7 @@ import com.vijay.learn.springcore.annotations.Employee;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class ClientAnnotations {
+public class SpringAnnotationsClient {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-application-context-annotations.xml");
 

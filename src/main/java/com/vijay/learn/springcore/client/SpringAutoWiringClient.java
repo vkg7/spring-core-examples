@@ -10,7 +10,7 @@ import com.vijay.learn.springcore.beandi.Student;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class ClientAutoWiring {
+public class SpringAutoWiringClient {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-application-context-autowiring.xml");
 

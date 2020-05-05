@@ -10,7 +10,7 @@ import com.vijay.learn.springcore.beanscope.BeanScope;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class ClientScope {
+public class SpringBeanScopeClient {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-application-context-scope.xml");
 

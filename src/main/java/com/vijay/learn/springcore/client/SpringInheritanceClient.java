@@ -10,7 +10,7 @@ import com.vijay.learn.springcore.beaninheritance.Father;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class ClientInheritance {
+public class SpringInheritanceClient {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-application-context-inheritance.xml");
 
