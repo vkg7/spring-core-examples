@@ -4,7 +4,7 @@
  * Certification: Spring Framework Certification Training
  */
 
-package com.vijay.learn.springcore.scope;
+package com.vijay.learn.springcore.beanscope;
 
 public class BeanScope {
     private String message;

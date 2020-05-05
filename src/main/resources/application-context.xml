@@ -9,34 +9,34 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="car" class="com.vijay.learn.springcore.di.Car">
+    <bean id="car" class="com.vijay.learn.springcore.beandi.Car">
         <property name="name" value="Sudan" />
         <property name="perDayCost" value="2000" />
     </bean>
 
-    <bean id="user" class="com.vijay.learn.springcore.di.User">
+    <bean id="user" class="com.vijay.learn.springcore.beandi.User">
         <property name="userName" value="Vijay Gupta" />
         <constructor-arg ref="car" /><!--Constructor based injection-->
         <!-- <property name="car" ref="car" />--><!-- Setter based injection-->
     </bean>
 
-    <bean id="student" class="com.vijay.learn.springcore.di.Student">
+    <bean id="student" class="com.vijay.learn.springcore.beandi.Student">
         <property name="name" value="Amar Singh" />
         <property name="id" value="454555" />
         <property name="hostel" ref="hostel" /><!-- Setter based injection-->
     </bean>
 
-    <bean id="hostel" class="com.vijay.learn.springcore.di.Hostel">
+    <bean id="hostel" class="com.vijay.learn.springcore.beandi.Hostel">
         <property name="city" value="Mumbai"/>
         <property name="hostelName" value="Late Bhausaheb Hiray's Trust"/>
     </bean>
 
 <!--    inner bean example- generally we do not use it-->
-    <bean id="studentInnerBean" class="com.vijay.learn.springcore.di.Student">
+    <bean id="studentInnerBean" class="com.vijay.learn.springcore.beandi.Student">
         <property name="name" value="Amar Singh" />
         <property name="id" value="454555" />
         <property name="hostel">
-            <bean id="hostelInnerBean" class="com.vijay.learn.springcore.di.Hostel">
+            <bean id="hostelInnerBean" class="com.vijay.learn.springcore.beandi.Hostel">
                 <property name="city" value="INNER BEAN - Mumbai"/>
                 <property name="hostelName" value="INNER BEAN - Late Bhausaheb Hiray's Trust"/>
             </bean>
@@ -45,7 +45,7 @@
 
     <alias name="student" alias="student_alias"/>
 
-    <bean id="studentIdRef" class="com.vijay.learn.springcore.di.Student">
+    <bean id="studentIdRef" class="com.vijay.learn.springcore.beandi.Student">
 <!--        <property name="name" value="Amar Singh" />-->
         <property name="id" value="454555" />
         <property name="hostel" ref="hostel" /><!-- Setter based injection-->
@@ -54,7 +54,7 @@
         </property>
     </bean>
 
-    <bean id="collectionsDI" class="com.vijay.learn.springcore.di.CollectionsDI">
+    <bean id="collectionsDI" class="com.vijay.learn.springcore.beandi.CollectionsDI">
         <property name="listOfStudents">
             <list>
                 <value>Vijay Gupta</value>
@@ -67,5 +67,5 @@
     <bean id="beanLifeCycleXML" class="com.vijay.learn.springcore.beanlifecycle.BeanLifeCycleXML" init-method="init" destroy-method="destroy" />
     <bean id="beanLifeCycleInterface" class="com.vijay.learn.springcore.beanlifecycle.BeanLifeCycleInterface" />
 
-    <bean id="beanScope" class="com.vijay.learn.springcore.scope.BeanScope" scope="prototype"/>
+    <bean id="beanScope" class="com.vijay.learn.springcore.beanscope.BeanScope" scope="prototype"/>
 </beans>

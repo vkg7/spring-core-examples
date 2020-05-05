@@ -4,7 +4,7 @@
  * Certification: Spring Framework Certification Training
  */
 
-package com.vijay.learn.springcore.di;
+package com.vijay.learn.springcore.beandi;
 
 public class Hostel {
     private String hostelName;
