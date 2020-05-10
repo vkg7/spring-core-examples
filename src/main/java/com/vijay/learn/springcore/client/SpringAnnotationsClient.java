@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringAnnotationsClient {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-application-context-annotations.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("springcore/spring-application-context-annotations.xml");
 
         Employee employee = context.getBean("employee", Employee.class);
         System.out.printf("Employee details = %s :%n",employee.toString());

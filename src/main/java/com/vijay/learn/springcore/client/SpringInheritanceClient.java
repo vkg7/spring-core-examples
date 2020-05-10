@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringInheritanceClient {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-application-context-inheritance.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("springcore/spring-application-context-inheritance.xml");
 
         Father father = context.getBean("father", Father.class);
         System.out.printf("Bean Inheitance - Father's name is %s %s : %n",father.getFirstName(),father.getLastName());

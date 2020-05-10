@@ -15,7 +15,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringBeanLifeCycleClient {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-application-context-lifecycle.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("springcore/spring-application-context-lifecycle.xml");
 
         BeanLifeCycleXML beanLifeCycle = context.getBean("beanLifeCycleXML", BeanLifeCycleXML.class);
         beanLifeCycle.sayHello();

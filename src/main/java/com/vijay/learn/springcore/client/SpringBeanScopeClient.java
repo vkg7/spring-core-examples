@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringBeanScopeClient {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-application-context-scope.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("springcore/spring-application-context-scope.xml");
 
         BeanScope beanScope = context.getBean("beanScope", BeanScope.class);
         beanScope.setMessage("We are testign Bean's Scope...");

@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class PropertyPlaceHolderClient {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-application-context-autodiscovery.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("springcore/spring-application-context-autodiscovery.xml");
         JdbcDataSource datasource = context.getBean("datasource", JdbcDataSource.class);
         System.out.printf("Database driver name : %s %n", datasource.getDrivername());
         System.out.printf("Database user name : %s %n", datasource.getUsername());

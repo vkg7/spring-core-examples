@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringExpressionClient {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-application-context-autodiscovery.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("springcore/spring-application-context-autodiscovery.xml");
         SpringExpression spel = context.getBean("spel", SpringExpression.class);
 
         System.out.println("Constant :"+spel.getConstant());

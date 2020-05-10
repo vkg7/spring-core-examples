@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringAutoWiringClient {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-application-context-autowiring.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("springcore/spring-application-context-autowiring.xml");
 
         //Autowiring byName
         Student studentAutoWiringByName = context.getBean("studentAutoWiringByName", Student.class);
