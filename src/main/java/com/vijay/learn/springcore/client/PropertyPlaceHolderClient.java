@@ -18,5 +18,4 @@ public class PropertyPlaceHolderClient {
         System.out.printf("Database user name : %s %n", datasource.getUsername());
         System.out.printf("Database password: %s %n", datasource.getPassword());
     }
-
 }

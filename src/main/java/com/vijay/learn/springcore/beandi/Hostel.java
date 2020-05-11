@@ -6,14 +6,8 @@
 
 package com.vijay.learn.springcore.beandi;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-
-@Component
 public class Hostel {
     private String hostelName;
-
-    @Value("Thane")
     private String city;
 
     public Hostel() {

@@ -6,8 +6,14 @@
 
 package com.vijay.learn.springcore.beandi;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Car {
+    @Value("Honda")
     private String name;
+    @Value("10000")
     private int perDayCost;
 
     public String getName() {

@@ -23,8 +23,8 @@ public class SpringExpression {
     @Value("#{T(java.lang.Math).PI * 45}")
     private double PI;
 
-    @Value("#{hostel.city}")
-    private String currentCity;
+    @Value("#{car.name}")
+    private String carName;
 
     public double getConstant() {
         return constant;
@@ -50,12 +50,12 @@ public class SpringExpression {
         this.currentDate = currentDate;
     }
 
-    public String getCurrentCity() {
-        return currentCity;
+    public String getCarName() {
+        return carName;
     }
 
-    public void setCurrentCity(String currentCity) {
-        this.currentCity = currentCity;
+    public void setCarName(String carName) {
+        this.carName = carName;
     }
 }
 
